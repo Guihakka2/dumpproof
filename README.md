@@ -14,12 +14,14 @@ npx @guihakka2/dumpproof volume-backup.tar.gz             # Docker volume archiv
 ```
 
 ```
-dumpproof  backup.sql.gz  (PostgreSQL plain SQL dump (gzip), 1.2 MB)
-  ✓ restored into postgres:17-alpine in 3.4s (network disabled)
-  2 tables · 2 rows
-    Weird "name"             0
-    users                    2
-  1 ownership statements skipped (roles from the original server)
+$ dumpproof backup.sql.gz --require users,orders
+dumpproof  backup.sql.gz  (PostgreSQL plain SQL dump (gzip), 286.2 KB)
+  ✓ restored into postgres:17-alpine in 9.8s (network disabled)
+  3 tables · 47,084 rows
+    audit_log             0
+    orders           45,880
+    users             1,204
+  2 ownership statements skipped (roles from the original server)
 
 Backup is restorable.
 ```
