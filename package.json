@@ -1,0 +1,35 @@
+{
+  "name": "@guihakka2/dumpproof",
+  "version": "0.1.0",
+  "description": "Prove your backups restore: Postgres/MySQL dumps into a throwaway Docker container, SQLite and tar archives checked to the end.",
+  "type": "module",
+  "bin": {
+    "dumpproof": "bin/dumpproof.js"
+  },
+  "exports": "./src/index.js",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "backup",
+    "restore",
+    "postgres",
+    "mysql",
+    "sqlite",
+    "docker",
+    "verify",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guihakka2/dumpproof.git"
+  },
+  "license": "MIT"
+}
