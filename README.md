@@ -48,6 +48,12 @@ pg_dump -Fc mydb > /backups/mydb.dump && npx -y @guihakka2/dumpproof /backups/my
 
 Exit codes: `0` restorable, `1` broken backup or a requirement failed, `2` usage error or Docker missing.
 
+## Download (no Node.js needed)
+
+Don't have Node.js? Each [release](https://github.com/Guihakka2/dumpproof/releases/latest) has a standalone program for Windows (x64, ARM), macOS (Apple silicon, Intel) and Linux (x64, ARM). Download the file for your system, unzip it and run `dumpproof` from a terminal, with the same options as above. Database restores still need Docker.
+
+The programs are built by GitHub Actions from this repository's code, with a `SHA256SUMS.txt` and a [build provenance attestation](https://docs.github.com/actions/security-for-github-actions/using-artifact-attestations) (`gh attestation verify <file> -R Guihakka2/dumpproof`). They are not code-signed with a paid certificate yet, so the first run shows a warning: on Windows, SmartScreen → "More info" → "Run anyway"; on macOS, run `xattr -d com.apple.quarantine dumpproof` once.
+
 ## Options
 
 | Option | |

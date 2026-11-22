@@ -1,6 +1,6 @@
 {
   "name": "@guihakka2/dumpproof",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prove your backups restore: Postgres/MySQL dumps into a throwaway Docker container, SQLite and tar archives checked to the end.",
   "type": "module",
   "bin": {
