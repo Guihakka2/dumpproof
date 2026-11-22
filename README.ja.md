@@ -17,3 +17,5 @@ npx @guihakka2/dumpproof volume-backup.tar.gz             # Docker ボリュー�
 - 所有者エラー（`role "app" does not exist`）は別サーバーへの復元では想定内なので数えて無視。それ以外のエラーは失敗
 
 セキュリティ：`--network none` のコンテナ、ランダムなパスワード、終了時（Ctrl+C でも）必ず削除。行データは表示せず、テーブル名と行数のみ。詳細は [SECURITY.md](SECURITY.md)。
+
+**Node.js がなくても使えます：** 各[リリース](https://github.com/Guihakka2/dumpproof/releases/latest)に Windows・macOS・Linux（x64 / ARM）用のプログラムがあります。ダウンロードして展開し、ターミナルで `dumpproof` を実行してください。データベースの復元には引き続き Docker が必要です。GitHub Actions でビルドされ、`SHA256SUMS.txt` とビルド来歴の証明付き。まだ有料の署名はないため、初回は Windows の SmartScreen（「詳細情報」→「実行」）、macOS では `xattr -d com.apple.quarantine dumpproof` を一度実行してください。

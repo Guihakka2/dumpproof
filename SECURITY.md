@@ -14,3 +14,7 @@ You will get a reply within 7 days.
 - Row data is never printed: output has table names and counts only, and database error messages have quoted values and `Key (x)=(value)` details masked.
 - SQLite files are opened read-only. tar archives are only read, never extracted; unsafe paths (`../`, absolute) are reported.
 - No telemetry, zero runtime dependencies. npm releases are built by GitHub Actions with provenance; never by hand.
+
+## Standalone executables
+
+Release executables are built only by GitHub Actions (`binaries.yml`) from the tagged source with the official Node.js single executable application feature, smoke-tested, and published with a SHA256SUMS.txt and a build provenance attestation (`gh attestation verify <file> -R Guihakka2/dumpproof`). They are not code-signed with a paid certificate yet.

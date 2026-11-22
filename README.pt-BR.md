@@ -17,3 +17,5 @@ npx @guihakka2/dumpproof volume-backup.tar.gz             # arquivo de volume Do
 - Erros de dono (`role "app" does not exist`) são esperados em outro servidor: são contados e ignorados. Qualquer outro erro falha.
 
 Segurança: container com `--network none`, senha aleatória, sempre removido no final (inclusive com Ctrl+C). Os dados das linhas nunca aparecem, só nomes de tabelas e contagens. Detalhes em [SECURITY.md](SECURITY.md).
+
+**Sem Node.js?** Cada [release](https://github.com/Guihakka2/dumpproof/releases/latest) tem um programa pronto para Windows, macOS e Linux (x64 e ARM): baixe, descompacte e rode `dumpproof` no terminal. A restauração de bancos continua precisando de Docker. Gerado pelo GitHub Actions, com `SHA256SUMS.txt` e atestado de procedência. Ainda sem assinatura paga: na primeira vez, o Windows mostra o SmartScreen ("Mais informações" → "Executar assim mesmo") e no macOS rode `xattr -d com.apple.quarantine dumpproof` uma vez.
